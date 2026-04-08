@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #1a2820;
+  color: #f0f0f0;
+  padding: 30px 20px;
+  margin: 0;
+}
+
+.app {
+  max-width: 1200px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 28px;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+  color: #d4edda;
+}
+
+/* ── Card ── */
+.card {
+  background: #243329;
+  padding: 25px;
+  border-radius: 14px;
+  margin-bottom: 30px;
+  border: 1px solid #2e4a38;
+}
+
+/* ── Form row (3 inputs side by side) ── */
+.form-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.form-row .form-group {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 13px;
+  display: block;
+  margin-bottom: 5px;
+  color: #b0c8b8;
+}
+
+.desc {
+  font-size: 11px;
+  color: #778f80;
+  display: block;
+  margin-top: 4px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #2e4a38;
+  background: #151f1a;
+  color: #f0f0f0;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+input:focus, textarea:focus {
+  border-color: #7ecf8e;
+}
+
+textarea {
+  height: 110px;
+  resize: none;
+}
+
+/* ── Reference box ── */
+.reference {
+  background: #151f1a;
+  padding: 14px 16px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  border: 1px solid #2e4a38;
+}
+
+.reference h3 {
+  font-size: 13px;
+  margin: 0 0 10px 0;
+  color: #a0c0a8;
+}
+
+.ref-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.tag {
+  background: #243329;
+  border: 1px solid #3a5a44;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  color: #c8e6c9;
+  font-family: monospace;
+}
+
+.example {
+  font-size: 12px;
+  color: #7a9a80;
+  margin: 0;
+}
+
+/* ── Button ── */
+.center {
+  text-align: center;
+  margin-top: 18px;
+}
+
+button {
+  padding: 11px 36px;
+  border-radius: 8px;
+  border: none;
+  background: #7ecf8e;
+  color: #1a2820;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.1s;
+}
+
+button:hover {
+  opacity: 0.88;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* ── Results: 3 columns ── */
+.results {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.algo {
+  flex: 1;
+  min-width: 220px;
+  background: #243329;
+  border-radius: 14px;
+  padding: 18px 14px;
+  border: 1px solid #2e4a38;
+}
+
+/* Coloured top bar per algorithm */
+.algo-header {
+  border-radius: 8px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.algo-label {
+  font-weight: bold;
+  font-size: 15px;
+  letter-spacing: 0.4px;
+}
+
+.hc-header  { background: rgba(126, 207, 142, 0.15); border: 1px solid rgba(126,207,142,0.3); }
+.hc-header .algo-label { color: #7ecf8e; }
+
+.ac-header  { background: rgba(100, 180, 255, 0.12); border: 1px solid rgba(100,180,255,0.3); }
+.ac-header .algo-label { color: #7ab8f5; }
+
+.ts-header  { background: rgba(255, 200, 100, 0.12); border: 1px solid rgba(255,200,100,0.3); }
+.ts-header .algo-label { color: #f5c842; }
+
+/* ── Grid ── */
+.grid {
+  display: grid;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 6px;
+}
+
+.seat {
+  width: 46px;
+  height: 46px;
+  background: #c8b99a;
+  color: #1a2820;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+/* ── Score ── */
+.score {
+  text-align: center;
+  font-size: 13px;
+  color: #a0c0a8;
+  margin: 10px 0 8px 0;
+}
+
+/* ── Explanations ── */
+.exp {
+  margin-top: 6px;
+}
+
+.exp-item {
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.pass {
+  background: rgba(126, 207, 142, 0.15);
+  color: #7ecf8e;
+}
+
+.fail {
+  background: rgba(240, 160, 122, 0.15);
+  color: #f0a07a;
+}

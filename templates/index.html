@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Constraint-Based Arrangement Optimization</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="app">
+  <h1>Constraint-Based Arrangement Optimization</h1>
+
+  <div class="card">
+
+    <!-- Inputs -->
+    <div class="form-group">
+      <label>Rows (m)</label>
+      <input id="rows" placeholder="e.g. 5">
+      <span class="desc">Number of rows in the arrangement</span>
+    </div>
+
+    <div class="form-group">
+      <label>Columns (n)</label>
+      <input id="cols" placeholder="e.g. 6">
+      <span class="desc">Number of columns</span>
+    </div>
+
+    <div class="form-group">
+      <label>Number of Entities</label>
+      <input id="count" placeholder="e.g. 10 (A–J)">
+      <span class="desc">Entities are labeled A to Z</span>
+    </div>
+
+    <!-- Constraint Reference -->
+    <div class="reference">
+      <h3>Constraint Types</h3>
+      <div class="reference-text">
+        <p><b>Together</b> → A B together</p>
+        <p><b>Not Together</b> → A C not together</p>
+        <p><b>Front</b> → D front</p>
+        <p><b>Middle</b> → E middle</p>
+        <p><b>Back</b> → F back</p>
+      </div>
+
+      <p class="example">
+        Example:
+        A B together<br>
+        C front<br>
+        D not together E
+      </p>
+    </div>
+
+    <!-- Constraints -->
+    <div class="form-group">
+      <label>Enter Constraints</label>
+      <textarea id="constraints"></textarea>
+    </div>
+
+    <div class="center">
+      <button onclick="generate()">Generate</button>
+    </div>
+
+  </div>
+
+  <!-- Results -->
+  <div class="results">
+
+    <div class="algo">
+      <h2>Hill Climbing</h2>
+      <div id="hc-grid" class="grid"></div>
+      <p id="hc-score"></p>
+      <div id="hc-exp" class="exp"></div>
+    </div>
+
+    <div class="algo">
+      <h2>A*</h2>
+      <div id="ac-grid" class="grid"></div>
+      <p id="ac-score"></p>
+      <div id="ac-exp" class="exp"></div>
+    </div>
+
+    <div class="algo">
+      <div class="algo-header ts-header">
+        <span class="algo-label">Tabu Search</span>
+      </div>
+      <div id="ts-grid" class="grid"></div>
+      <p id="ts-score" class="score"></p>
+      <div id="ts-exp" class="exp"></div>
+    </div>
+
+
+
+  </div>
+</div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
