@@ -2,6 +2,9 @@
 
 A web-based system that solves arrangement problems using search-based optimization techniques. The system takes user-defined conditions in simple text form and generates an optimized arrangement while minimizing constraint violations.
 
+Link of the project deployed - https://constraint-based-arrangement-optimiser.onrender.com
+
+
 ---
 
 ## Overview
